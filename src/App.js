@@ -6,7 +6,9 @@ import MilesAhead from './Components/MilesAhead';
 import CustomerDetails from './Components/CustomerDetails';
 import Clock from './Components/Clock';
 import Car from './Components/Car';
-import ProductTable from './Components/ProductTable';
+import ProductTable from './ProductTable/ProductTable';
+import SearchProduct from './ProductTable/SearchProduct';
+import Game from './GameRoom/Game';
 
 function App() {
   return (
@@ -22,8 +24,9 @@ function App() {
     <Clock/>
     <br/>
     <Car/>
-    <br/> */}
-    <ProductTable/>
+    <br/>
+    <ProductTable/> */}
+    <Game/>
     </>
   );
 }
