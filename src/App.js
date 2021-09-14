@@ -10,6 +10,9 @@ import ProductTable from './ProductTable/ProductTable';
 import SearchProduct from './ProductTable/SearchProduct';
 import Game from './GameRoom/Game';
 import ProductManager from './BasketExercise/ProductManager';
+import Shopping from './Hooks/Shopping';
+import LessText from './Hooks/LessText';
+import Greet from './Hooks/PassName';
 
 function App() {
   return (
@@ -27,8 +30,13 @@ function App() {
     <Car/>
     <br/>
     <ProductTable/>
-    <Game/> */}
-    <ProductManager/>
+    <Game/> 
+    <ProductManager/>*/}
+    <Shopping/>
+    <br/>
+    <LessText text="dgdskskjdfghds" maxLength={6}/>
+    <br/>
+    <Greet name="Jodi"/>
     </>
   );
 }
