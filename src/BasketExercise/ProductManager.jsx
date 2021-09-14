@@ -1,18 +1,29 @@
-import Products from "./Products.json";
-import Product from "./Product";
-import Basket from "./Basket";
 import { useState } from "react";
+import Basket from "./Basket";
+import AddProduct from "./Product";
 
 const ProductManager = () => {
-    console.log("Products: ", Products);
-    const [basket, setBasket] = useState();
+    const [productName, setProductName] = useState("");
+    const [products, setProducts] = useState([]);
 
-    return (<>
-        {
-            Products.map(({ nm }) => <Product key={nm + " : "} nm={nm} />)
-        }
-        <Basket />
-    </>);
+    const newProduct = ({ target }) => setProductName(target.value);
+    const productAdd = (e) => {
+        e.preventDefault();
+        setProducts([...products, productName]);
+    }
+    const productDelete = (i) => {
+        const _products = [...products];
+        _products.splice(i);
+        debugger;
+        setProducts(_products);
+    };
+    console.log(products);;
+
+    return (
+        <>
+            <AddProduct newProduct={newProduct} submitHandler={productAdd} />
+            <Basket products={products} productDelete={productDelete} />
+        </>
+    );
 }
-
 export default ProductManager;

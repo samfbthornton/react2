@@ -1,18 +1,12 @@
-import PropTypes from "prop-types";
+const AddProduct = ({ newProduct, submitHandler, productAdd }) =>
+    <form onSubmit={submitHandler}>
+        <input type="text"
+            onChange={newProduct}
+            placeholder="Enter Product:"
+        />
+        <button type="submit">
+            Add Product
+        </button>
+    </form>
 
-const Product = ({ nm }) => {
-
-    return (
-        <>
-            <h4>{nm}</h4>
-            <button>Add to Basket</button>
-        </>
-    );
-
-}
-
-Product.propTypes = {
-    nm: PropTypes.string.isRequired,
-}
-
-export default Product;
+export default AddProduct;

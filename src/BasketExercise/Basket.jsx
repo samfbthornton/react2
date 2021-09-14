@@ -1,14 +1,21 @@
-import ProductManager from "./ProductManager";
-import Product from "./Product";
+const Basket = ({ products, productDelete }) => {
+    const ShowBasket = ({ productName, index}) =>
+        <li> {productName}
+            <button onClick ={ () => productDelete(index)}>
+                Delete
+            </button>
+        </li>
 
-
-const Basket = (nm) => {
-    console.log("Basket: ",);
     return (
         <>
-            <h1>Basket:</h1>
+            {products.map((productName, i) => (
+                <ShowBasket
+                    productName={productName}
+                    key={i}
+                    index={i}
+                />
+            ))}
         </>
     );
 }
-
 export default Basket;

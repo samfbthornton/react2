@@ -9,6 +9,7 @@ import Car from './Components/Car';
 import ProductTable from './ProductTable/ProductTable';
 import SearchProduct from './ProductTable/SearchProduct';
 import Game from './GameRoom/Game';
+import ProductManager from './BasketExercise/ProductManager';
 
 function App() {
   return (
@@ -25,8 +26,9 @@ function App() {
     <br/>
     <Car/>
     <br/>
-    <ProductTable/> */}
-    <Game/>
+    <ProductTable/>
+    <Game/> */}
+    <ProductManager/>
     </>
   );
 }
