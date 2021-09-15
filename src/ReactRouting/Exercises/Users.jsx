@@ -15,7 +15,7 @@ const Users = () => {
                 <p>
                     <Link to="/users/3">User 3</Link>
                 </p>
-            <p>{id}</p>
+            <p>User Selected: {id}</p>
         </>
     );
 }

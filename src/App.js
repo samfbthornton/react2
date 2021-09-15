@@ -73,6 +73,9 @@ const App = () => {
                      <Route path="/contact" >
                          <Contact />
                      </Route>
+                     <Route path="/:badRoute">
+                        <NotFound />
+                     </Route>
                  </Switch>
              </div>
          </Router>
