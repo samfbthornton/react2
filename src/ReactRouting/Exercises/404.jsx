@@ -6,7 +6,7 @@ const NotFound = () => {
     return (
         <>
         <h2>Page Not Found</h2>
-        <h3>/{badRoute}</h3>
+        <h3>http://localhost:3000/{badRoute}</h3>
         </>
     );
 }
