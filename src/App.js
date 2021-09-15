@@ -13,6 +13,8 @@ import ProductManager from './BasketExercise/ProductManager';
 import Shopping from './Hooks/Shopping';
 import LessText from './Hooks/LessText';
 import Greet from './Hooks/PassName';
+import EmployeeInfo from './DataRequests/DataRequest';
+import FilmRequest from './DataRequests/FilmRequest';
 
 function App() {
   return (
@@ -31,12 +33,14 @@ function App() {
     <br/>
     <ProductTable/>
     <Game/> 
-    <ProductManager/>*/}
+    <ProductManager/>
     <Shopping/>
     <br/>
     <LessText text="dgdskskjdfghds" maxLength={6}/>
     <br/>
     <Greet name="Jodi"/>
+    <EmployeeInfo/>*/}
+    <FilmRequest/>
     </>
   );
 }
