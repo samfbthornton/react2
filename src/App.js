@@ -1,25 +1,33 @@
 
 import './App.css';
-import PropComp from './Components/PropComp';
-import ComponentWithProps from './Components/ComponentWithProps';
-import MilesAhead from './Components/MilesAhead';
-import CustomerDetails from './Components/CustomerDetails';
-import Clock from './Components/Clock';
-import Car from './Components/Car';
-import ProductTable from './ProductTable/ProductTable';
-import SearchProduct from './ProductTable/SearchProduct';
-import Game from './GameRoom/Game';
-import ProductManager from './BasketExercise/ProductManager';
-import Shopping from './Hooks/Shopping';
-import LessText from './Hooks/LessText';
-import Greet from './Hooks/PassName';
-import EmployeeInfo from './DataRequests/DataRequest';
-import FilmRequest from './DataRequests/FilmRequest';
+// import PropComp from './Components/PropComp';
+// import ComponentWithProps from './Components/ComponentWithProps';
+// import MilesAhead from './Components/MilesAhead';
+// import CustomerDetails from './Components/CustomerDetails';
+// import Clock from './Components/Clock';
+// import Car from './Components/Car';
+// import ProductTable from './ProductTable/ProductTable';
+// import SearchProduct from './ProductTable/SearchProduct';
+// import Game from './GameRoom/Game';
+// import ProductManager from './BasketExercise/ProductManager';
+// import Shopping from './Hooks/Shopping';
+// import LessText from './Hooks/LessText';
+// import Greet from './Hooks/PassName';
+// import EmployeeInfo from './DataRequests/DataRequest';
+// import FilmRequest from './DataRequests/FilmRequest';
+import Nav from './ReactRouting/Exercises/Nav';
+import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
+import Home from './ReactRouting/Exercises/Home';
+import Users from './ReactRouting/Exercises/Users';
+import Contact from './ReactRouting/Exercises/Contact';
+import NotFound from './ReactRouting/Exercises/404';
+import About from './ReactRouting/About';
+import Shop from './ReactRouting/Shop';
 
-function App() {
+const App = () => {
   return (
     <>
-    {/* <PropComp/>
+      {/* <PropComp/>
     <br/>
     <ComponentWithProps header="Yo" content="Team" number={4} nonexistent={true}/>
     <br/>
@@ -36,11 +44,39 @@ function App() {
     <ProductManager/>
     <Shopping/>
     <br/>
-    <LessText text="dgdskskjdfghds" maxLength={6}/>
+    <LessText text="Team 4 Rulezzzz" maxLength={6}/>
     <br/>
     <Greet name="Jodi"/>
-    <EmployeeInfo/>*/}
-    <FilmRequest/>
+    <EmployeeInfo/>
+    <FilmRequest/>*/}
+      <Router>
+             <div>
+                     <h4>
+                         <Link to="/">Home</Link>
+                     </h4>
+                     <h4>
+                         <Link to="/users">Users</Link>
+                     </h4>
+                     <h4>
+                         <Link to="/contact">Contact</Link>
+                     </h4>
+                 <Switch>
+                     <Route exact path="/">
+                         <Home />
+                     </Route>
+                     <Route path="/users/:id">
+                         <Users />
+                     </Route>
+                     <Route path="/users">
+                         <Users />
+                     </Route>
+                     <Route path="/contact" >
+                         <Contact />
+                     </Route>
+                 </Switch>
+             </div>
+         </Router>
+
     </>
   );
 }
