@@ -22,6 +22,7 @@ const FilmRequest = () => {
     return (
         <>
             <div style={{
+                color: "hotpink",
                 backgroundColor: "lightblue",
                 borderStyle: "inset",
                 borderWidth: "thick"
@@ -40,10 +41,10 @@ const FilmRequest = () => {
                         color: "hotpink",
                         float: "left" 
                         }}>Click here!</button>
-                <br />
+                <br/>
                 <h4>{data.Title}</h4>
                 <h4>{data.Year}</h4>
-                <h4>{data.Plot}</h4>
+                <h4 style={{float:"left"}}>{data.Plot}</h4>
                 <h4>{data.Runtime}</h4>
                 <img src={data.Poster} alt="Poster"></img>
             </div>
