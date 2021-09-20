@@ -1,5 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
+import { Card } from "react-bootstrap";
 
 const FilmRequest = () => {
     const [data, setData] = useState("");
@@ -42,11 +43,13 @@ const FilmRequest = () => {
                         float: "left" 
                         }}>Click here!</button>
                 <br/>
-                <h4>{data.Title}</h4>
-                <h4>{data.Year}</h4>
-                <h4 style={{float:"left"}}>{data.Plot}</h4>
-                <h4>{data.Runtime}</h4>
+                <Card>
+                <Card.Title>{data.Title}</Card.Title>
+                <Card.Subtitle>{data.Year}</Card.Subtitle>
+                <Card.Text style={{float:"left"}}>{data.Plot}</Card.Text>
+                <Card.Text>{data.Runtime}</Card.Text>
                 <img src={data.Poster} alt="Poster"></img>
+                </Card>
             </div>
         </>
     );

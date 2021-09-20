@@ -14,7 +14,7 @@ import './App.css';
 // import LessText from './Hooks/LessText';
 // import Greet from './Hooks/PassName';
 // import EmployeeInfo from './DataRequests/DataRequest';
-// import FilmRequest from './DataRequests/FilmRequest';
+import FilmRequest from './DataRequests/FilmRequest';
 import Nav from './ReactRouting/Exercises/Nav';
 import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import Home from './ReactRouting/Exercises/Home';
@@ -38,7 +38,7 @@ const App = () => {
     <Clock/>
     <br/>
     <Car/>
-    <br/>
+      <br/>
     <ProductTable/>
     <Game/> 
     <ProductManager/>
@@ -47,9 +47,9 @@ const App = () => {
     <LessText text="Team 4 Rulezzzz" maxLength={6}/>
     <br/>
     <Greet name="Jodi"/>
-    <EmployeeInfo/>
-    <FilmRequest/>*/}
-      <Router>
+      <EmployeeInfo/>*/}
+    <FilmRequest/>
+      {/* <Router>
              <div>
                      <h4>
                          <Link to="/">Home</Link>
@@ -78,7 +78,7 @@ const App = () => {
                      </Route>
                  </Switch>
              </div>
-         </Router>
+         </Router> */}
 
     </>
   );
